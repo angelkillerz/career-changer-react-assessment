@@ -5,28 +5,22 @@ import OwnerPage from './pages/OwnerPage';
 import './Home.css'
 
 import {
-  createBrowserRouter,
-  RouterProvider,
-  HashRouter
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route
 } from "react-router-dom";
 
-const router =  createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/owner',
-    element: <OwnerPage />
-  },
- 
-  
-])
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  
-    <RouterProvider router={router} />
-  
-  
+const router = (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/owner" element={<OwnerPage />} />
+  </Routes>
 )
+
+ReactDOM.render(
+  <BrowserRouter>
+    {router}
+  </BrowserRouter>,
+  document.getElementById('root')
+);
