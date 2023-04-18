@@ -13,8 +13,8 @@ import {
 
 const router = (
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/owner" element={<OwnerPage />} />
+    <Route exact path="/" element={Home} />
+    <Route exact path="/owner" element={OwnerPage} />
   </Routes>
 )
 
