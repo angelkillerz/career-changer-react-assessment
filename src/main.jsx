@@ -10,7 +10,7 @@ import {
   HashRouter
 } from "react-router-dom";
 
-const router = HashRouter([
+const router = createBrowserRouter([
   {
     path: '/career-changer-react-assessment',
     element: <Home />
