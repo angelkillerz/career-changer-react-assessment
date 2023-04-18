@@ -14,8 +14,8 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: '/owner',
-    element: <OwnerPage/>
+    path: 'owner',
+    element: <OwnerPage />
   }
 ])
 
