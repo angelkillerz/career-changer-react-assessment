@@ -11,11 +11,11 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/career-changer-react-assessment',
     element: <Home />
   },
   {
-    path: '/owner',
+    path: '/career-changer-react-assessment/owner',
     element: <OwnerPage />
   },
  
