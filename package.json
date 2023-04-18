@@ -1,7 +1,7 @@
 {
   "homepage": "http://angelkillerz.github.io/career-changer-react-assessment",
   "name": "generation-thailand-assessment",
-  "private": true,
+  "private": "false",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

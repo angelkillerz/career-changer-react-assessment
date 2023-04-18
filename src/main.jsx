@@ -10,13 +10,13 @@ import {
   HashRouter
 } from "react-router-dom";
 
-const router = HashRouter([
+const router =  createBrowserRouter([
   {
-    path: '/career-changer-react-assessment',
+    path: '/',
     element: <Home />
   },
   {
-    path: '/career-changer-react-assessment/owner',
+    path: '/owner',
     element: <OwnerPage />
   },
  
@@ -25,8 +25,8 @@ const router = HashRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  
     <RouterProvider router={router} />
-  </React.StrictMode>
+  
   
 )
