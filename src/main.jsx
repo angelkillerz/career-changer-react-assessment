@@ -11,7 +11,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: '/career-changer-react-assessment',
+    path: '/career-changer-react-assessment/',
     element: <Home />
   },
   {
