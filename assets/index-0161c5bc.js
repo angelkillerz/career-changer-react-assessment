@@ -94,4 +94,4 @@ Error generating stack: `+o.message+`
   font-family: 'Spline Sans Mono', monospace;
   color: black;
 
-`,V_=()=>q("div",{className:"owner-container",children:q("h1",{children:"Pang - Group D - 42"})});const W_=F0([{path:"/career-changer-react-assessment",element:q(B_,{})},{path:"/career-changer-react-assessment/owner",element:q(V_,{})}]);fa.createRoot(document.getElementById("root")).render(q(D0,{router:W_}));
+`,V_=()=>q("div",{className:"owner-container",children:q("h1",{children:"Pang - Group D - 42"})});const W_=F0([{path:"/career-changer-react-assessment/",element:q(B_,{})},{path:"/career-changer-react-assessment/owner",element:q(V_,{})}]);fa.createRoot(document.getElementById("root")).render(q(D0,{router:W_}));
