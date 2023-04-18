@@ -3,24 +3,24 @@ import ReactDOM from 'react-dom/client';
 import Home from './Home';
 import OwnerPage from './pages/OwnerPage';
 import './Home.css'
-
 import {
-  BrowserRouter,
-  HashRouter,
-  Routes,
-  Route
+  createBrowserRouter,
+  RouterProvider,
 } from "react-router-dom";
 
-const router = (
-  <Routes>
-    <Route exact path="/" element={Home} />
-    <Route exact path="/owner" element={OwnerPage} />
-  </Routes>
-)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/owner',
+    element: <OwnerPage/>
+  }
+])
 
-ReactDOM.render(
-  <BrowserRouter>
-    {router}
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
