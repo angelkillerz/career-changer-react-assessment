@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+
+}
+
+li {
+    margin: 2em;
+    padding: 10px;
+    right: 1em;
+    list-style: none;
+}
+
+.title-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;;
+    border: 1px solid black;
+    margin: 2em;
+    width: 150x;
+    height: 40px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: black;
+    color: wheat;
+}
+
+/* Table */
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.table-container {
+    max-width: 50vw;
+    margin: auto;
+}
+
+thead tr{
+    text-align: center;
+}
+
+
+
+th, td {
+    padding: 12px;
+    text-align: left;
+  }
+
+th {
+    font-weight: bold;
+}
+
+
+/* Form */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 1em;
+    border: 1px solid black;
+    padding: 0.8em;
+}
