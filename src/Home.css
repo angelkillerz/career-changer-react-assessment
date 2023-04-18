@@ -102,3 +102,17 @@ input {
     border: 1px solid black;
     padding: 0.8em;
 }
+
+/* Owner page*/
+.owner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.img-container {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}

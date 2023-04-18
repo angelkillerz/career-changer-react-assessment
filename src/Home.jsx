@@ -6,6 +6,7 @@ import UserPage from "./pages/UserPage"
 import mockEmployees from "./data/mockEmployee"
 import styled from "styled-components";
 import Design from "./components/Particles"
+import OwnerPage from "./pages/OwnerPage"
 //import './Home.css'
 
 
@@ -41,6 +42,7 @@ const Home = () => {
   return (
     <>
        <Content>
+        
           <Navbar />
 
           <div className="title-hero">
