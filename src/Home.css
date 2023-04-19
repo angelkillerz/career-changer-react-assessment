@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;600&display=swap');
+  
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Spline Sans Mono', monospace;
 }
 
 ul {
@@ -115,4 +118,5 @@ input {
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }

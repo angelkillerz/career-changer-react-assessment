@@ -1,5 +1,8 @@
 import { Link, Routes, Route } from 'react-router-dom';
 const Navbar = () => {
+    const reloadPage = () => {
+        window.location.reload(false)
+    }
     return (
         <nav className="nav-bar">
             <ul>

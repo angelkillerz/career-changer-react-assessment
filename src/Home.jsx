@@ -14,12 +14,16 @@ const Home = () => {
   
   const [sectors, setSector] = useState("");
   const [data, setData] = useState(mockEmployees);
+  const [adminVisibility, setAdminVisibility] = useState(false);
+  const [userVisibility, setUserVisibility] = useState(false);
   
   const handleSector = (sector) => {
     if (sector.toLowerCase() === 'user') {
+        setUserVisibility(!userVisibility);
         setSector(sector)
         console.log(sectors)
     } else if ( sector.toLowerCase() === 'admin') {
+      setAdminVisibility(!adminVisibility)
       setSector(sector)
       console.log(sectors)
     } else {
@@ -34,7 +38,11 @@ const Home = () => {
 
   const deleteEmployee = (id) => {
     console.log("delete" + id)
-      setData(data.filter((value) => value.id !== id))
+    setData(data.filter((value) => value.id !== id))
+  }
+
+  const contentVisibility = () => {
+
   }
 
 
@@ -42,7 +50,9 @@ const Home = () => {
   return (
     <>
        <Content>
-        
+          
+
+          
           <Navbar />
 
           <div className="title-hero">
@@ -50,20 +60,23 @@ const Home = () => {
               <h1>Generation Thailand React Assesment</h1>
             </div>
             <div>
-                <h1> {sectors === 'user' ? "User section" : sectors === 'admin' ? "Admin section" : null }</h1>
+                <h1> {userVisibility && sectors === 'user' ? "User section" : adminVisibility && sectors === 'admin' ? "Admin section" : null }</h1>
            </div>
           </div>
           
 
           <SectorButton sector={sectors} handleSector={handleSector}/>
 
-          {sectors === 'admin' ? <AdminPage id={data.id} data={data} addEmployee={addNewEmployee} sector={sectors} deleteEmployee={deleteEmployee}/> 
-          : sectors === 'user' 
+          {adminVisibility && sectors === 'admin' ? <AdminPage id={data.id} data={data} addEmployee={addNewEmployee} sector={sectors} deleteEmployee={deleteEmployee}/> 
+          : userVisibility && sectors === 'user' 
           ? <UserPage data={data} 
           sector={sectors}/> 
           : null}
 
-        <Design />
+      <Design>
+        Hello
+      </Design>
+       
 
       </Content>    
 
