@@ -17,13 +17,18 @@ const Home = () => {
   const [adminVisibility, setAdminVisibility] = useState(false);
   const [userVisibility, setUserVisibility] = useState(false);
   
+  console.log(sectors)
+  console.log("admin",adminVisibility)
+  console.log("user",userVisibility)
   const handleSector = (sector) => {
     if (sector.toLowerCase() === 'user') {
         setUserVisibility(!userVisibility);
+        setAdminVisibility(false)
         setSector(sector)
         console.log(sectors)
     } else if ( sector.toLowerCase() === 'admin') {
       setAdminVisibility(!adminVisibility)
+      setUserVisibility(false)
       setSector(sector)
       console.log(sectors)
     } else {
@@ -31,6 +36,9 @@ const Home = () => {
       console.log(sectors)
     }
   }
+
+
+
 
   const addNewEmployee = (newEmployee) => {
     setData([...data, newEmployee]);
@@ -41,9 +49,7 @@ const Home = () => {
     setData(data.filter((value) => value.id !== id))
   }
 
-  const contentVisibility = () => {
-
-  }
+ 
 
 
 
@@ -67,15 +73,15 @@ const Home = () => {
 
           <SectorButton sector={sectors} handleSector={handleSector}/>
 
-          {adminVisibility && sectors === 'admin' ? <AdminPage id={data.id} data={data} addEmployee={addNewEmployee} sector={sectors} deleteEmployee={deleteEmployee}/> 
+          {adminVisibility && sectors === 'admin' ? <AdminPage id={data.id} data={data} addEmployee={addNewEmployee} sector={sectors} deleteEmployee={deleteEmployee}/>
           : userVisibility && sectors === 'user' 
           ? <UserPage data={data} 
           sector={sectors}/> 
           : null}
 
-      <Design>
-        Hello
-      </Design>
+      {/* <Design>
+        
+      </Design> */}
        
 
       </Content>    
@@ -87,14 +93,14 @@ const Home = () => {
   )
 }
 
-const Background = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; /* Send the background behind other content */
-`;
+// const Background = styled.div`
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: -1; /* Send the background behind other content */
+// `;
 
 const Content = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;600&display=swap');
